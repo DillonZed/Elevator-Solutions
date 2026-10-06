@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node build.mjs",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.elevatorsolutions.ca" }], "destination": "https://elevatorsolutions.ca/$1", "permanent": true },
+    { "source": "/sitemap_index.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/page-sitemap.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/feed", "destination": "/", "permanent": true },
+    { "source": "/strata-depreciation-reports", "destination": "/depreciation-report-planning/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "missing": [{ "type": "host", "value": "elevatorsolutions.ca" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    }
+  ]
+}
