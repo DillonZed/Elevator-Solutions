@@ -14,7 +14,7 @@ export const site = {
     postal: 'V6E 3P3',
     country: 'CA',
   },
-  regions: ['Lower Mainland', 'Fraser Valley', 'Vancouver Island', 'Okanagan and Interior', 'Northern BC', 'Alberta'],
+  regions: ['Lower Mainland', 'Fraser Valley', 'Vancouver Island', 'Okanagan and Interior', 'Northern BC', 'Alberta', 'Saskatchewan'],
   rescueUrl: 'https://elevatorrescue.ca/',
   kronUrl: 'https://www.kronengineering.ca/',
   // Legacy WordPress GTM container GTM-MJB56MD removed 2026-10-16 (it only held a dead Universal Analytics tag

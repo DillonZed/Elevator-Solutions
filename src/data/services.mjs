@@ -7,7 +7,7 @@ export const services = [
     name: 'Condition Assessment & Planning Report',
     short: 'Remaining life, obsolescence and a realistic capital plan for each elevator.',
     metaTitle: 'Elevator Condition Assessment & Planning Report | ESI',
-    metaDescription: 'Independent elevator condition assessments in BC and Alberta. Remaining life, obsolescence, parts availability and a capital plan you can budget against.',
+    metaDescription: 'Independent elevator condition assessments in BC, Alberta and Saskatchewan. Remaining life, obsolescence, parts availability and a capital plan.',
     eyebrow: 'Condition Assessment',
     h1: 'Elevator Condition Assessment & Planning Report',
     lead: [
@@ -28,7 +28,7 @@ export const services = [
     related: ['depreciation-report-planning', 'due-diligence', 'modernization'],
     faq: [
       { q: 'How is this different from the elevator section of a depreciation report?', a: 'A depreciation report covers the whole building, so the elevator line is usually a broad estimate. Our condition assessment looks only at the elevators, in more detail: component condition, remaining life, obsolescence, parts availability, maintenance and modernization timing.' },
-      { q: 'Do you work outside Vancouver?', a: 'Yes. Most of our work is in the Lower Mainland, and we also take on assessments on Vancouver Island, in the Interior, in Northern BC and in Alberta, depending on the project.' },
+      { q: 'Do you work outside Vancouver?', a: 'Yes. Most of our work is in the Lower Mainland, and we also take on assessments on Vancouver Island, in the Interior, in Northern BC, Alberta and Saskatchewan, depending on the project.' },
       { q: 'Is this a Technical Safety BC inspection?', a: 'No. This is an independent review for the owner. Regulatory inspections are carried out by Technical Safety BC.' },
     ],
   },
@@ -145,7 +145,7 @@ export const services = [
     name: 'Final, Acceptance & Deficiency Reviews',
     short: 'Independent reviews before you sign off and pay the final invoice.',
     metaTitle: 'Elevator Final, Acceptance & Deficiency Reviews | ESI',
-    metaDescription: 'Independent elevator final, acceptance and deficiency reviews, performance testing and code-related reviews for owners in BC and Alberta.',
+    metaDescription: 'Independent elevator final, acceptance and deficiency reviews, performance testing and code-related reviews for owners in BC, Alberta and Saskatchewan.',
     eyebrow: 'Acceptance Reviews',
     h1: 'Final, Acceptance & Deficiency Reviews',
     lead: [

@@ -96,6 +96,7 @@ const organization = {
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'British Columbia' },
     { '@type': 'AdministrativeArea', name: 'Alberta' },
+    { '@type': 'AdministrativeArea', name: 'Saskatchewan' },
   ],
   founder: { '@type': 'Person', name: 'Glenn Zolnierczyk', jobTitle: 'Principal and Senior Consultant' },
   subOrganization: { '@type': 'Organization', name: 'ESI Elevator Rescue Training', url: site.rescueUrl },
