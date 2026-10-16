@@ -111,9 +111,17 @@ address { font-style: normal; }
   position: absolute; top: calc(100% + 10px); left: -16px; width: 440px;
   background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--navy);
   box-shadow: 0 24px 48px -20px rgba(3, 31, 54, .35);
-  padding: 10px; display: none;
+  padding: 10px;
+  /* hidden with a short close delay, so moving the mouse from "Services" to a link never drops the menu */
+  visibility: hidden; opacity: 0; transform: translateY(-4px);
+  transition: opacity .15s ease, transform .15s ease, visibility 0s linear .25s;
 }
-.dd.open .dd-panel, .dd:hover .dd-panel, .dd:focus-within .dd-panel { display: block; }
+.dd-panel::before { /* invisible bridge over the gap between the button and the panel */
+  content: ''; position: absolute; left: 0; right: 0; top: -24px; height: 24px;
+}
+.dd.open .dd-panel, .dd:hover .dd-panel, .dd:focus-within .dd-panel {
+  visibility: visible; opacity: 1; transform: none; transition-delay: 0s;
+}
 .dd-panel a { display: grid; grid-template-columns: 34px 1fr; padding: 10px 12px; text-decoration: none; color: var(--navy); font-weight: 600; font-size: 15px; border-radius: var(--radius); }
 .dd-panel a small { grid-column: 2; display: block; color: var(--ink-soft); font-weight: 400; font-size: 13.5px; line-height: 1.4; margin-top: 3px; }
 .dd-panel a:hover { background: var(--paper); }
