@@ -460,3 +460,19 @@ address { font-style: normal; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* thank-you page */
+.ty-hero { padding-bottom: clamp(40px, 5vw, 64px); }
+.ty-check { width: 64px; height: 64px; margin: 0 auto 22px; display: grid; place-items: center; background: var(--navy); color: #fff; border-radius: 50%; box-shadow: 0 0 0 8px rgba(5, 51, 87, .08); animation: rise .6s cubic-bezier(.2, .7, .2, 1) both; }
+.ty-check svg { width: 30px; height: 30px; stroke-dasharray: 24; stroke-dashoffset: 24; animation: draw .5s ease-out .35s forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.ty-grid { display: grid; grid-template-columns: 1.4fr .6fr; gap: 48px; align-items: start; }
+.ty-next { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--navy); padding: clamp(24px, 4vw, 36px); }
+.ty-steps { list-style: none; margin: 0; padding: 0; }
+.ty-steps li { display: grid; grid-template-columns: 48px 1fr; gap: 12px; padding: 16px 0; border-bottom: 1px dashed var(--line); color: var(--ink-soft); font-size: 16px; }
+.ty-steps li:last-child { border-bottom: 0; padding-bottom: 0; }
+.ty-steps li > span { width: 36px; height: 36px; display: grid; place-items: center; background: var(--amber); color: var(--navy-deep); font: 500 14px/1 var(--f-mono); }
+.ty-steps b { display: block; color: var(--navy); font: 600 22px/1.2 var(--f-display); margin-bottom: 4px; }
+.ty-side { display: grid; gap: 28px; }
+.ty-side .soft { margin: 8px 0 0; }
+@media (max-width: 860px) { .ty-grid { grid-template-columns: 1fr; } }

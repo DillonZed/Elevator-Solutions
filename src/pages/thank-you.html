@@ -1,7 +1,52 @@
-<!-- {"title":"Thank You | ESI Elevator Solutions","description":"Thanks for contacting ESI Elevator Solutions.","nav":"","noindex":true,"nocta":true} -->
-<section class="phero center"><div class="shell">
+<!-- {"title":"Thank You | ESI Elevator Solutions","description":"Thanks for contacting ESI Elevator Solutions. Our team will review your request and get back to you.","nav":"","noindex":true,"nocta":true} -->
+<section class="phero center ty-hero"><div class="shell">
+  <span class="ty-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
   <p class="label">Request received</p>
   <h1>Thanks. We'll be in touch.</h1>
-  <p class="lead narrow">Our team will review what you sent and call you to talk it through. If it's urgent, call our office at <a href="{{phone_href}}">{{phone}}</a>.</p>
-  <div class="cta-row"><a class="btn" href="/">Back to home</a><a class="btn ghost" href="/services/">Browse services</a></div>
+  <p class="lead narrow">Your request is with our team. We'll review what you sent and contact you to talk through the building and what you need.</p>
 </div></section>
+
+<section class="sec tight"><div class="shell">
+  <div class="ty-grid">
+    <div class="ty-next">
+      <p class="label">What happens next</p>
+      <ol class="ty-steps">
+        <li><span>1</span><div><b>We review your request</b>Our team reads through the details and any documents you included.</div></li>
+        <li><span>2</span><div><b>A consultant contacts you</b>We'll talk through the building, the elevators and what you need from us.</div></li>
+        <li><span>3</span><div><b>You receive a quote</b>A clear scope and price for the work, before anything is booked.</div></li>
+      </ol>
+    </div>
+    <aside class="ty-side">
+      <div>
+        <p class="label">Need us sooner?</p>
+        <a class="big-link" href="{{phone_href}}">{{phone}}</a>
+        <p class="soft small">Call our office if the request is urgent.</p>
+      </div>
+      <div>
+        <p class="label">Have documents to add?</p>
+        <p class="soft small">Email a depreciation report, maintenance contract or contractor quote to <a href="mailto:{{email}}">{{email}}</a>.</p>
+      </div>
+    </aside>
+  </div>
+</div></section>
+
+<section class="sec tight"><div class="shell">
+  <p class="label">While you wait</p>
+  <div class="rels">
+    <a class="rel" href="/condition-assessment/"><span>Condition Assessment &amp; Planning Report</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="rel" href="/depreciation-report-planning/"><span>Depreciation Report Planning</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="rel" href="/about-us/"><span>About ESI</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</div></section>
+
+<script>
+  // One lead event per visit for GTM/GA4. The GHL form redirects here after a successful submit.
+  (function () {
+    try {
+      if (sessionStorage.getItem('esi_lead_fired')) return;
+      sessionStorage.setItem('esi_lead_fired', '1');
+    } catch (e) {}
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'generate_lead', form_name: 'Contact Form', lead_source: 'elevatorsolutions.ca' });
+  })();
+</script>
