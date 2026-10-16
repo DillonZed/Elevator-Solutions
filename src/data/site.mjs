@@ -19,6 +19,8 @@ export const site = {
   kronUrl: 'https://www.kronengineering.ca/',
   // Google Tag Manager container carried over from the WordPress site. Loads on the production host only.
   gtm: 'GTM-MJB56MD',
+  // GA4 (gtag.js), added 2026-10-16. Also production host only.
+  ga4: 'G-6BSG5TS8LB',
   productionHost: 'elevatorsolutions.ca',
   // GoHighLevel form in the ESI Elevator Solutions Inc. sub-account (3B7UGyzwnXXEWyf7Mu7l).
   // Leave id empty until the form exists; pages then show call/email options instead.

@@ -48,5 +48,6 @@
     } catch (e) {}
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: 'generate_lead', form_name: 'Contact Form', lead_source: 'elevatorsolutions.ca' });
+    if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { form_name: 'Contact Form' });
   })();
 </script>

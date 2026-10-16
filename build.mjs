@@ -132,7 +132,8 @@ function jsonld(meta) {
   return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
 }
 
-// GTM only fires on the production host, so previews and local builds never send data.
+// GA4 + GTM only fire on the production host, so previews and local builds never send data.
+const gaHead = site.ga4 ? `<script>if(location.hostname==='${site.productionHost}'){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=${site.ga4}';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','${site.ga4}');}</script>` : '';
 const gtmHead = site.gtm ? `<script>if(location.hostname==='${site.productionHost}'){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${site.gtm}');}</script>` : '';
 
 // ---------- render ----------
@@ -155,7 +156,7 @@ function renderPage(meta, body) {
     canonical: site.url + meta.path,
     robots: meta.noindex ? '<meta name="robots" content="noindex, follow">' : '',
     jsonld: meta.noindex ? '' : jsonld(meta),
-    gtm_head: gtmHead,
+    gtm_head: gaHead + gtmHead,
     gtm_body: '',
     bodyclass: meta.bodyclass || '',
     header: fill(h),
