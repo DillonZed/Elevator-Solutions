@@ -16,7 +16,7 @@ export const services = [
     ],
     asks: ['What condition is our elevator in?', 'How much life does it have left?', 'When should we modernize?'],
     includes: [
-      { t: 'On-site review', d: 'Machine room, controller, hoistway, car and door equipment, looked at by someone who has spent 35+ years around elevators.' },
+      { t: 'On-site review', d: 'Machine room, controller, hoistway, car and door equipment, reviewed on site by an experienced ESI consultant.' },
       { t: 'Maintenance history', d: 'Maintenance records, callbacks and recurring faults, so the report reflects how the elevator actually runs.' },
       { t: 'Remaining life by component', d: 'Which parts are fine for years, which are wearing out, and which are close to the end of their service life.' },
       { t: 'Obsolescence and parts availability', d: 'Whether replacement parts are still made, and what happens to repair times when they are not.' },

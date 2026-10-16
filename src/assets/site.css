@@ -254,6 +254,11 @@ address { font-style: normal; }
 .person-img::before { content: ''; position: absolute; inset: 24px -24px -24px 24px; background: var(--navy); z-index: -1; }
 .person-img img { width: 100%; aspect-ratio: 1; object-fit: cover; position: relative; }
 .person { isolation: isolate; }
+.team-mini { list-style: none; margin: 4px 0 26px; padding: 18px 0 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 14px 28px; }
+.team-mini li { display: flex; align-items: center; gap: 12px; }
+.team-mini img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+.team-mini b { display: block; font: 600 18px/1.15 var(--f-display); color: var(--navy); }
+.team-mini span { font-size: 14px; color: var(--ink-soft); }
 .role { font: 500 13px/1.4 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--grey); margin: -6px 0 18px; }
 
 /* regions */

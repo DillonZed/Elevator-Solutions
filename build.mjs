@@ -16,7 +16,7 @@ const footer = read(join(SRC, 'partials/footer.html'));
 const cta = read(join(SRC, 'partials/cta.html'));
 
 const CTA_H2 = 'Talk to an independent elevator consultant.';
-const CTA_P = 'Tell us about your building and what is going on with the elevators. Glenn will call you back to talk it through.';
+const CTA_P = 'Tell us about your building and what is going on with the elevators. Our team will review it and get back to you to talk it through.';
 
 // ---------- shared fragments ----------
 const svc = Object.fromEntries(services.map((s) => [s.slug, s]));
@@ -36,7 +36,7 @@ const fragments = {
     <a class="svc-card ask" href="/contact/">
       <span class="svc-num">Not sure?</span>
       <h3>Not sure which service you need?</h3>
-      <p>Describe what is going on with the elevators and Glenn will tell you where to start.</p>
+      <p>Describe what is going on with the elevators and our team will recommend where to start.</p>
       <span class="go">Call ${site.phone} ${arrow}</span>
     </a>
   </div>`,
@@ -52,7 +52,7 @@ function formBlock() {
   if (!f.id) {
     return `<div class="form-fallback">
   <p class="label">Request an assessment</p>
-  <h3>Call or email, and Glenn will get back to you to talk it through.</h3>
+  <h3>Call or email us, and our team will get back to you to talk it through.</h3>
   <div class="ff-actions"><a class="btn" href="${site.phoneHref}">Call ${site.phone}</a><a class="btn ghost" href="mailto:${site.email}?subject=Elevator%20consulting%20inquiry">Email ${site.email}</a></div>
   <p class="soft">Helpful to include: the building address, number of elevators, and what is prompting the call. If you have a depreciation report, attach it.</p>
 </div>`;
