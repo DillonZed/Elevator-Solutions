@@ -3,9 +3,9 @@ export const site = {
   url: 'https://elevatorsolutions.ca',
   name: 'ESI Elevator Solutions Inc.',
   shortName: 'ESI Elevator Solutions',
-  phone: '604-862-5432',
-  phoneHref: 'tel:+16048625432',
-  phoneIntl: '+1-604-862-5432',
+  phone: '778-402-5465',
+  phoneHref: 'tel:+17784025465',
+  phoneIntl: '+1-778-402-5465',
   email: 'info@elevatorsolutions.ca',
   address: {
     street: '1055 West Georgia Street, Suite 2100',
