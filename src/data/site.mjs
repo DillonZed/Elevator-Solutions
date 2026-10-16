@@ -17,8 +17,9 @@ export const site = {
   regions: ['Lower Mainland', 'Fraser Valley', 'Vancouver Island', 'Okanagan and Interior', 'Northern BC', 'Alberta'],
   rescueUrl: 'https://elevatorrescue.ca/',
   kronUrl: 'https://www.kronengineering.ca/',
-  // Google Tag Manager container carried over from the WordPress site. Loads on the production host only.
-  gtm: 'GTM-MJB56MD',
+  // Legacy WordPress GTM container GTM-MJB56MD removed 2026-10-16 (it only held a dead Universal Analytics tag
+  // feeding a leftover GA4 property, plus Hotjar 1189116). Set an ID here to load a GTM container again.
+  gtm: '',
   // GA4 (gtag.js), added 2026-10-16. Also production host only.
   ga4: 'G-6BSG5TS8LB',
   productionHost: 'elevatorsolutions.ca',

@@ -259,7 +259,8 @@ ${faq}
 });
 
 // ---------- sitemap + robots ----------
-const urls = built.filter((b) => !b.meta.noindex && b.path !== '404.html').map((b) => site.url + b.meta.path);
+const urls = built.filter((b) => !b.meta.noindex && b.path !== '404.html').map((b) => site.url + b.meta.path)
+  .sort((a, b) => (a === site.url + '/' ? -1 : b === site.url + '/' ? 1 : 0));
 writeFileSync(join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`);
 writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nDisallow:\n\nSitemap: ${site.url}/sitemap.xml\n`);
 
