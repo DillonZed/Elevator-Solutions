@@ -2,6 +2,7 @@
 // Pages are emitted as <slug>/index.html so every URL ends in a slash, matching the old WordPress URLs.
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+import { createHash } from 'node:crypto';
 import { site } from './src/data/site.mjs';
 import { services } from './src/data/services.mjs';
 
@@ -10,7 +11,11 @@ const read = (p) => readFileSync(p, 'utf8');
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const year = new Date().getFullYear();
 
-const layout = read(join(SRC, 'layout.html'));
+// Cache-bust CSS/JS: the URL changes whenever the file content changes, so browsers never mix new HTML with old styles.
+const ver = (p) => createHash('sha1').update(readFileSync(p)).digest('hex').slice(0, 10);
+const layout = read(join(SRC, 'layout.html'))
+  .replace('/assets/site.css', `/assets/site.css?v=${ver(join(SRC, 'assets/site.css'))}`)
+  .replace('/assets/site.js', `/assets/site.js?v=${ver(join(SRC, 'assets/site.js'))}`);
 const header = read(join(SRC, 'partials/header.html'));
 const footer = read(join(SRC, 'partials/footer.html'));
 const cta = read(join(SRC, 'partials/cta.html'));
