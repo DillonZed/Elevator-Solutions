@@ -181,6 +181,7 @@ mkdirSync(join(DIST, 'assets'), { recursive: true });
 cpSync(join(SRC, 'assets/img'), join(DIST, 'assets/img'), { recursive: true });
 cpSync(join(SRC, 'assets/site.css'), join(DIST, 'assets/site.css'));
 cpSync(join(SRC, 'assets/site.js'), join(DIST, 'assets/site.js'));
+cpSync(join(SRC, 'assets/favicon.ico'), join(DIST, 'favicon.ico'));
 
 // ---------- hand-written pages ----------
 for (const file of readdirSync(join(SRC, 'pages')).filter((f) => f.endsWith('.html'))) {
